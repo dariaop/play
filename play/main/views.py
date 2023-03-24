@@ -19,3 +19,6 @@ def training(request):
 
 def career(request):
     return render(request, 'main/career.html')
+
+def create(request):
+    return render(request, 'main/create.html')
