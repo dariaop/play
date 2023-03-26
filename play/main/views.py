@@ -27,11 +27,9 @@ def create(request):
         form = PersonForm(request.POST)
         if form.is_valid():
            #print(form.cleaned_data)
-            try:
-                Person.objects.create(**form.cleaned_data)
-                return redirect('main')
-            except:
-                form.add_error(None, 'Ошибка')
+            form.save()
+            return redirect('main')
+
     else:
         form = PersonForm()
     return render(request, 'main/create.html', {'form': form})
