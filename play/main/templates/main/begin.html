@@ -3,11 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Начало</title>
+    <style>
+        h1{
+            font-size: 85px;
+                color: white;
+            text-align:center;
+
+        }
+        body{
+            background-color:black;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            font-size:40px;
+        }
+        p{
+            position:relative;
+            left:41.5%;
+        }
+    </style>
 </head>
 <body>
-<h1>Игра</h1>
-<p><a href="{% url 'create' %}">Создать персонажа</a></p>
-<p><a href="{% url 'main' %}">Загрузить игру</a></p>
-<p>Настройки</p>
+<h1>Unknown legend</h1>
+    <p><a href="{% url 'create' %}">Создать персонажа</a></p><br>
+    <p><a href="{% url 'main' %}">Загрузить игру</a></p><br>
+    <p><a>Настройка</a></p>
 </body>
 </html>
