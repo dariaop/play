@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+
+from .forms import *
 
 
 def begin(request):
@@ -21,4 +23,13 @@ def career(request):
     return render(request, 'main/career.html')
 
 def create(request):
-    return render(request, 'main/create.html')
+    if request.method == 'POST':
+        form = PersonForm(request.POST)
+        if form.is_valid():
+           #print(form.cleaned_data)
+            form.save()
+            return redirect('main')
+
+    else:
+        form = PersonForm()
+    return render(request, 'main/create.html', {'form': form})

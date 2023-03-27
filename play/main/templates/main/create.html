@@ -6,6 +6,13 @@
 </head>
 <body>
 <h1>Создать персонажа</h1>
+<form action="{% url 'create' %}" method="post">
 
+    <div class="form_error">{{ form.field_errors }}</div>
+
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Добавить</button>
+</form>
 </body>
 </html>
