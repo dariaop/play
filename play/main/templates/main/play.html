@@ -1,10 +1,67 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="{% static 'main/js/play.js' %}"></script>
     <meta charset="UTF-8">
     <title>Игра</title>
+    <style>
+        body{
+            background-color:black;
+        }
+        h1{
+            text-align:center;
+            color:red;
+            background-color:black;
+            font-size:100px;
+        }
+
+        .all{
+            display:inline;
+        }
+
+        p{
+           color:red;
+           font-size:50px;
+           position:relative;
+           left:5%;
+        }
+        button{
+            width:350px;
+            height:50px;
+            font-size:35px;
+        }
+
+        .Protect{
+            position:fixed;
+            left:70%;
+            top:22%;
+        }
+        .Ataka{
+            position:fixed;
+            left:17%;
+            top:22%;
+        }
+    </style>
 </head>
 <body>
+<h1>Fight</h1>
+<div class="all">
+    <div class="Ataka">
+        <p id="myhp">100</p>
+        <p>Атака</p>
+        <button id="ag">Голова</button><br>
+        <button id="at">Тело</button><br>
+        <button id="an">Ноги</button>
+    </div>
 
+    <div class="Protect">
+        <p id="ourhp">100</p>
+        <p>Защита</p>
+        <button id="zg">Голова</button><br>
+        <button id="zt">Тело</button><br>
+        <button id="zn">Ноги</button>
+    </div>
+</div>
 </body>
 </html>

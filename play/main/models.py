@@ -7,3 +7,7 @@ class Person(models.Model):
     height = models.IntegerField(verbose_name='Рост')
     login = models.EmailField(verbose_name='Логин')
     password = models.CharField(max_length=20, verbose_name='Пароль')
+
+    class Meta:
+        verbose_name = 'Игрок'
+        verbose_name_plural = 'Игроки'
