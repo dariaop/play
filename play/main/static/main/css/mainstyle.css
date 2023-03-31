@@ -1,0 +1,21 @@
+h1{
+    font-size: 85px;
+    color: white;
+    text-align:center;
+
+}
+body{
+    background-color:black;
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-size:40px;
+}
+p{
+    position:relative;
+    left:37%;
+    border:1px solid white;
+    width:500px;
+    text-align:center;
+}

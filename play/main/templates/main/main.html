@@ -1,11 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Главное меню</title>
+    <link type="text/css" href="{% static 'main/css/mainstyle.css' %}" rel="stylesheet">
 </head>
 <body>
-<h1>Игра</h1>
+<h1>Unknown legend</h1>
 <p><a href="{% url 'play' %}">Быстрый бой</a></p>
 <p><a href="{% url 'career' %}">Карьера</a></p>
 <p><a href="{% url 'training' %}">Тренировки</a></p>
